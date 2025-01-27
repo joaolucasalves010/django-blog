@@ -1,0 +1,1 @@
+<h1>Django Blog</h1>
