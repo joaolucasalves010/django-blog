@@ -14,7 +14,7 @@ ENV PYTHONUNBUFFERED 1
 COPY project /project
 COPY scripts /scripts
 
-# Entra na pasta djangoapp no container
+# Entra na pasta project no container
 WORKDIR /project
 
 # A porta 8000 estará disponível para conexões externas ao container
