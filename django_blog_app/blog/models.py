@@ -8,6 +8,7 @@ class Post(models.Model):
     verbose_name_plural = 'Posts'
 
   title = models.CharField(max_length=200)
+  description = models.CharField(max_length=400, default='', blank=True)
   content = models.TextField()
   author = models.ForeignKey(User, on_delete=models.CASCADE)
   created_at = models.DateTimeField(auto_now_add=True)
