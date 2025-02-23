@@ -13,6 +13,7 @@ class Post(models.Model):
   author = models.ForeignKey(User, on_delete=models.CASCADE)
   created_at = models.DateTimeField(auto_now_add=True)
   favicon = models.ImageField(upload_to='posts/favicon', default=None, blank=True)
+  image = models.ImageField(upload_to='posts/image', default=None, blank=True)
 
   def __str__(self):
     return self.title
