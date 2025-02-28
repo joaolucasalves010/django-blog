@@ -5,8 +5,8 @@ from django.core.paginator import Paginator
 # Create your views here.
 def index(request):
 
-  posts = Post.objects.all()
-  paginator = Paginator(posts, 2)
+  posts = Post.objects.all().order_by('-id')
+  paginator = Paginator(posts, 5)
   
   page_number = request.GET.get('page')
   page_obj = paginator.get_page(page_number)
