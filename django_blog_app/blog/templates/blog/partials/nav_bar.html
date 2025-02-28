@@ -1,0 +1,8 @@
+<nav id="nav-bar">
+  <ul>
+    <li><h1>Django</h1></li>
+    <li><a href={% url "blog:index" %}>Home</a></li>
+    <li><a href="/">Logout</a></li>
+    <li><p>{{request.user.username}}</p></li>
+  </ul>
+</nav>
