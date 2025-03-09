@@ -10,7 +10,7 @@
       {% endif %}
       {% for post in page_obj %}
         <div class="post">
-          <a href="{% url "blog:post" post.title post.id %}" class="post-title" target="_blank">{{post.title}}</a>
+          <a href="{% url "blog:post" post.author post.id %}" class="post-title" target="_blank">{{post.title}}</a>
           {% if post.image %}
             <img src={{post.image.url}} alt="Post Image">
           {% endif %}
